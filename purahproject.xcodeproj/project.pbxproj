@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		1F5D0C1E2BFBC2970026BFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C1D2BFBC2970026BFA5 /* AppDelegate.swift */; };
 		1F5D0C202BFBC2970026BFA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C1F2BFBC2970026BFA5 /* SceneDelegate.swift */; };
-		1F5D0C222BFBC2970026BFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C212BFBC2970026BFA5 /* ViewController.swift */; };
+		1F5D0C222BFBC2970026BFA5 /* DiaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C212BFBC2970026BFA5 /* DiaryController.swift */; };
 		1F5D0C252BFBC2970026BFA5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1F5D0C242BFBC2970026BFA5 /* Base */; };
 		1F5D0C272BFBC2980026BFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5D0C262BFBC2980026BFA5 /* Assets.xcassets */; };
 		1F5D0C2A2BFBC2980026BFA5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1F5D0C292BFBC2980026BFA5 /* Base */; };
 		1F5D0C352BFBC2990026BFA5 /* purahprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C342BFBC2990026BFA5 /* purahprojectTests.swift */; };
 		1F5D0C3F2BFBC2990026BFA5 /* purahprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C3E2BFBC2990026BFA5 /* purahprojectUITests.swift */; };
 		1F5D0C412BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C402BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift */; };
+		1FDAA34E2BFE4E93003D9EFE /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */; };
+		1FDAA3502BFE4EA3003D9EFE /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		1F5D0C1A2BFBC2970026BFA5 /* purahproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = purahproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5D0C1D2BFBC2970026BFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F5D0C1F2BFBC2970026BFA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F5D0C212BFBC2970026BFA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F5D0C212BFBC2970026BFA5 /* DiaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryController.swift; sourceTree = "<group>"; };
 		1F5D0C242BFBC2970026BFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F5D0C262BFBC2980026BFA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F5D0C292BFBC2980026BFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		1F5D0C3A2BFBC2990026BFA5 /* purahprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = purahprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5D0C3E2BFBC2990026BFA5 /* purahprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purahprojectUITests.swift; sourceTree = "<group>"; };
 		1F5D0C402BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purahprojectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		1F5D0C1C2BFBC2970026BFA5 /* purahproject */ = {
 			isa = PBXGroup;
 			children = (
+				1FDAA34C2BFE4E4F003D9EFE /* Todo Components */,
+				1FDAA34B2BFE4E3C003D9EFE /* Search Components */,
+				1FDAA34A2BFE4C39003D9EFE /* Diary Components */,
 				1F5D0C1D2BFBC2970026BFA5 /* AppDelegate.swift */,
 				1F5D0C1F2BFBC2970026BFA5 /* SceneDelegate.swift */,
-				1F5D0C212BFBC2970026BFA5 /* ViewController.swift */,
 				1F5D0C232BFBC2970026BFA5 /* Main.storyboard */,
 				1F5D0C262BFBC2980026BFA5 /* Assets.xcassets */,
 				1F5D0C282BFBC2980026BFA5 /* LaunchScreen.storyboard */,
@@ -125,6 +131,30 @@
 				1F5D0C402BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift */,
 			);
 			path = purahprojectUITests;
+			sourceTree = "<group>";
+		};
+		1FDAA34A2BFE4C39003D9EFE /* Diary Components */ = {
+			isa = PBXGroup;
+			children = (
+				1F5D0C212BFBC2970026BFA5 /* DiaryController.swift */,
+			);
+			path = "Diary Components";
+			sourceTree = "<group>";
+		};
+		1FDAA34B2BFE4E3C003D9EFE /* Search Components */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */,
+			);
+			path = "Search Components";
+			sourceTree = "<group>";
+		};
+		1FDAA34C2BFE4E4F003D9EFE /* Todo Components */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */,
+			);
+			path = "Todo Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5D0C222BFBC2970026BFA5 /* ViewController.swift in Sources */,
+				1F5D0C222BFBC2970026BFA5 /* DiaryController.swift in Sources */,
 				1F5D0C1E2BFBC2970026BFA5 /* AppDelegate.swift in Sources */,
 				1F5D0C202BFBC2970026BFA5 /* SceneDelegate.swift in Sources */,
+				1FDAA34E2BFE4E93003D9EFE /* SearchController.swift in Sources */,
+				1FDAA3502BFE4EA3003D9EFE /* TodoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
