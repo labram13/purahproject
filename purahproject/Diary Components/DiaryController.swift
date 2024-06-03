@@ -8,8 +8,8 @@ import Foundation
 import UIKit
 
 protocol DiaryEntryCellDelegate: AnyObject {
-//    func editEntry(cell: DiaryEntryCell)
-//    func submitEditEntry(cell: DiaryEntryCell)
+    func editEntry(cell: DiaryEntryCell)
+    func submitEditEntry(cell: DiaryEntryCell)
     func deleteEntry(cell: DiaryEntryCell)
 }
 
@@ -24,23 +24,23 @@ class DiaryEntryCell: UITableViewCell {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var submitEditButton: UIButton!
     
-//    @IBAction func editPressed(_ sender: Any) {
-//        bodyLabel.isHidden = true
-//        editTextView.isHidden = false
-//        editButton.isHidden = true
-//        deleteButton.isHidden = true
-//        submitEditButton.isHidden = false
-//        delegate?.editEntry(cell: self)
-//    }
-//
-//    @IBAction func editSubmit(_ sender: Any) {
-//        bodyLabel.isHidden = false
-//        editTextView.isHidden = true
-//        editButton.isHidden = false
-//        deleteButton.isHidden = false
-//        submitEditButton.isHidden = true
-//        delegate?.submitEditEntry(cell: self)
-//    }
+    @IBAction func editPressed(_ sender: Any) {
+        bodyLabel.isHidden = true
+        editTextView.isHidden = false
+        editButton.isHidden = true
+        deleteButton.isHidden = true
+        submitEditButton.isHidden = false
+        delegate?.editEntry(cell: self)
+    }
+
+    @IBAction func editSubmit(_ sender: Any) {
+        bodyLabel.isHidden = false
+        editTextView.isHidden = true
+        editButton.isHidden = false
+        deleteButton.isHidden = false
+        submitEditButton.isHidden = true
+        delegate?.submitEditEntry(cell: self)
+    }
     
     @IBAction func deletePressed(_ sender: Any) {
         delegate?.deleteEntry(cell: self)
@@ -129,26 +129,26 @@ class DiaryController: UIViewController, UITableViewDelegate, UITableViewDataSou
         return nil
     }
     
-//    func editEntry(cell: DiaryEntryCell) {
-//        if let indexPath = tableView.indexPath(for: cell) {
-//            cell.editTextView.text = entries[indexPath.row].body
-//        }
-//
-//    }
-//
-//    func submitEditEntry(cell: DiaryEntryCell) {
-//        NSLog("in submiteditentry")
-//        NSLog(String(describing: tableView.indexPath(for: cell)))
-//        if let indexPath = tableView.indexPath(for: cell) {
-//            NSLog("within submiteditentry")
-//            NSLog(cell.editTextView.text)
-//            entries[indexPath.row].body = cell.editTextView.text
-//            NSLog(String(describing: entries[indexPath.row]))
-//            tableView.reloadData()
-//            saveEntries()
-//        }
-//        NSLog("out submiteditentry")
-//    }
+    func editEntry(cell: DiaryEntryCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            cell.editTextView.text = entries[indexPath.row].body
+        }
+
+    }
+
+    func submitEditEntry(cell: DiaryEntryCell) {
+        NSLog("in submiteditentry")
+        NSLog(String(describing: tableView.indexPath(for: cell)))
+        if let indexPath = tableView.indexPath(for: cell) {
+            NSLog("within submiteditentry")
+            NSLog(cell.editTextView.text)
+            entries[indexPath.row].body = cell.editTextView.text
+            NSLog(String(describing: entries[indexPath.row]))
+            tableView.reloadData()
+            saveEntries()
+        }
+        NSLog("out submiteditentry")
+    }
     
     func deleteEntry(cell: DiaryEntryCell) {
         if let indexPath = tableView.indexPath(for: cell) {
