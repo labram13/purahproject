@@ -8,36 +8,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="vIf-Gi-m50">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="purahproject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jD-I3-76G">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="OmD-yP-K7c"/>
-                                    <tabBarItem systemItem="more" id="4XC-t7-pZc"/>
-                                </items>
-                            </tabBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="dbi-7o-Li4" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6t5-Ri-DuA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fjQ-X7-8xV" kind="relationship" relationship="viewControllers" id="bPf-q9-ZqE"/>
+                        <segue destination="K3r-qZ-HBx" kind="relationship" relationship="viewControllers" id="57N-ri-EL0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zb1-kn-CPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="47" y="-104"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--To Do-->
         <scene sceneID="NFh-O1-mPF">
             <objects>
                 <navigationController storyboardIdentifier="todo" id="K3r-qZ-HBx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="To Do" id="eiL-e6-CIX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="SId-sk-ZMc">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,9 +57,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h96-B2-zLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="689"/>
+            <point key="canvasLocation" x="47" y="1459"/>
         </scene>
-        <!--Item-->
+        <!--Diary-->
         <scene sceneID="2Eg-pw-MUG">
             <objects>
                 <viewController id="fjQ-X7-8xV" customClass="DiaryController" customModule="purahproject" sceneMemberID="viewController">
@@ -205,7 +198,7 @@
                             <constraint firstItem="nmc-rc-JvC" firstAttribute="top" secondItem="Now-cy-YOe" secondAttribute="bottom" constant="8" id="ppk-Wx-2bf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HoY-68-RuD"/>
+                    <tabBarItem key="tabBarItem" title="Diary" id="HoY-68-RuD"/>
                     <connections>
                         <outlet property="addEntryButton" destination="Now-cy-YOe" id="pFS-rk-2mf"/>
                         <outlet property="addEntryText" destination="mF6-4l-aYc" id="2SZ-TL-0Ir"/>
@@ -214,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnq-z6-8O8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="1403"/>
+            <point key="canvasLocation" x="-785" y="689"/>
         </scene>
     </scenes>
     <resources>
@@ -225,19 +218,19 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="placeholderTextColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
