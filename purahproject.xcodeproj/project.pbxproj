@@ -18,6 +18,9 @@
 		1F5D0C412BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D0C402BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift */; };
 		1FDAA34E2BFE4E93003D9EFE /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */; };
 		1FDAA3502BFE4EA3003D9EFE /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */; };
+		1FF1D6902C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1D68F2C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf */; };
+		1FF1D6912C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1D68F2C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf */; };
+		1FF1D6922C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1D68F2C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,7 @@
 		1F5D0C402BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purahprojectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
+		1FF1D68F2C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HyliaSerifBeta-Regular.otf"; path = "../../../../Downloads/Hylia Serif Beta v0-009/HyliaSerifBeta-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				1FDAA34B2BFE4E3C003D9EFE /* Search Components */,
 				1FDAA34A2BFE4C39003D9EFE /* Diary Components */,
 				1F5D0C1D2BFBC2970026BFA5 /* AppDelegate.swift */,
+				1FF1D68F2C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf */,
 				1F5D0C1F2BFBC2970026BFA5 /* SceneDelegate.swift */,
 				1F5D0C232BFBC2970026BFA5 /* Main.storyboard */,
 				1F5D0C262BFBC2980026BFA5 /* Assets.xcassets */,
@@ -261,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF1D6902C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf in Resources */,
 				1F5D0C272BFBC2980026BFA5 /* Assets.xcassets in Resources */,
 				1F5D0C2A2BFBC2980026BFA5 /* Base in Resources */,
 				1F5D0C252BFBC2970026BFA5 /* Base in Resources */,
@@ -271,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF1D6912C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF1D6922C0E0FB900388CAA /* HyliaSerifBeta-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

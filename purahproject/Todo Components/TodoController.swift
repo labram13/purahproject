@@ -23,6 +23,7 @@ class TodoController: UIViewController, UITableViewDataSource, UITableViewDelega
         view.addSubview(table)
         table.dataSource = self
         table.delegate = self
+       
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,6 +62,7 @@ class TodoController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "HyliaSerifBeta-Regular", size: 17)
         return cell
     }
     

@@ -9,11 +9,63 @@ import UIKit
 
 class SearchController: UIViewController {
 
+    @IBOutlet weak var monsterButton: UIButton!
+    @IBOutlet weak var creatureButton: UIButton!
+    @IBOutlet weak var itemsButton: UIButton!
+    @IBOutlet weak var weaponsButton: UIButton!
+    @IBOutlet weak var treasureButton: UIButton!
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setButtonLabelFonts()
+       
+}
+    
+    func setButtonLabelFonts() {
+        if let button = monsterButton {
+            if let currentFont = button.titleLabel?.font {
+                if let customFont = UIFont(name: "HyliaSerifBeta-Regular", size: currentFont.pointSize) {
+                    button.titleLabel?.font = customFont
+                }
+            }
+        }
+        if let button = creatureButton {
+            if let currentFont = button.titleLabel?.font {
+                if let customFont = UIFont(name: "HyliaSerifBeta-Regular", size: currentFont.pointSize) {
+                    button.titleLabel?.font = customFont
+                }
+            }
+        }
+        if let button = itemsButton {
+            if let currentFont = button.titleLabel?.font {
+                if let customFont = UIFont(name: "HyliaSerifBeta-Regular", size: currentFont.pointSize) {
+                    button.titleLabel?.font = customFont
+                }
+            }
+        }
+        if let button = weaponsButton {
+            if let currentFont = button.titleLabel?.font {
+                if let customFont = UIFont(name: "HyliaSerifBeta-Regular", size: currentFont.pointSize) {
+                    button.titleLabel?.font = customFont
+                }
+            }
+        }
+        if let button = treasureButton {
+            if let currentFont = button.titleLabel?.font {
+                if let customFont = UIFont(name: "HyliaSerifBeta-Regular", size: currentFont.pointSize) {
+                    button.titleLabel?.font = customFont
+                }
+            }
+        }
     }
+    
+
+  
     
 
     /*

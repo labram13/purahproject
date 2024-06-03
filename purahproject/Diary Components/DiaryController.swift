@@ -74,6 +74,13 @@ class DiaryController: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableView.dataSource = self
         tableView.delegate = self
         dateFormatter.dateFormat = "MM/dd/yyyy"
+        if let currentFont = addEntryButton.titleLabel?.font {
+            let customFont = UIFont(name: "HyliaSerifBeta-Regular", size: currentFont.pointSize)
+            addEntryButton.titleLabel?.font = customFont
+            print("Custom font applied: \(customFont?.fontName ?? "Unknown")")
+        } else {
+            print("Custom font not found")
+        }
         
     }
     
