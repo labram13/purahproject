@@ -95,11 +95,32 @@ class DetailsViewController: UIViewController {
             detailsLabel.text = weaponStats
             
         } else if let material = material {
-           
+    
         } else if let creature = creature {
          
         } else if let treasure = treasure {
-           
+            nameLabel.text = treasure.name.capitalized
+            descriptionLabel.text = treasure.description
+            if let imageUrl = URL(string: treasure.image) {
+                imageView.loadImage(from: imageUrl)
+            }
+            if let locations = treasure.common_locations { let joinedLocations = locations.joined(separator: "\n")
+                    locationsLabel.text = joinedLocations
+            } else {
+                locationsLabel.text = "Unknown"
+            }
+            detailsTitleLabel.text = "Drops"
+            if let drops = treasure.drops {
+                let joinedDrops = drops.joined(separator: "\n")
+                if joinedDrops.isEmpty {
+                    detailsLabel.text = "None"
+
+                } else {
+                    detailsLabel.text = joinedDrops.capitalized
+                }
+            } else {
+                detailsLabel.text = "Unknown"
+            }
         } else {
             NSLog("No data")
         }
