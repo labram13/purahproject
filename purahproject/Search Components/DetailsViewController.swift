@@ -32,8 +32,15 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var detailsLabel: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var locationsTitleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nameSize = nameLabel.font.pointSize
+           nameLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: nameSize)
+        let detailsSize = detailsTitleLabel.font.pointSize
+           detailsTitleLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: detailsSize)
+        let locationsSize = locationsTitleLabel.font.pointSize
+           locationsTitleLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: locationsSize)
         
         if let monster = monster {
             nameLabel.text = monster.name.capitalized
