@@ -16,16 +16,18 @@ class SearchController: UIViewController {
     @IBOutlet weak var treasureButton: UIButton!
     
     
-    
-    
-    
+    @IBOutlet weak var monsterIcon: UIImageView!
+    @IBOutlet weak var creatureIcon: UIImageView!
+    @IBOutlet weak var itemIcon: UIImageView!
+    @IBOutlet weak var weaponsIcon: UIImageView!
+    @IBOutlet weak var treasureIcon: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonLabelFonts()
        
 }
-    
+
     func setButtonLabelFonts() {
         if let button = monsterButton {
             if let currentFont = button.titleLabel?.font {

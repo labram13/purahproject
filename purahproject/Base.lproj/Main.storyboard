@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tR2-5r-RXD">
-                                <rect key="frame" x="99.666666666666686" y="115.99999999999999" width="194" height="45.333333333333329"/>
+                                <rect key="frame" x="99.666666666666686" y="116" width="194" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="194" id="FQs-Xv-ZdI"/>
                                     <constraint firstAttribute="height" constant="45" id="mXO-k1-Cfv"/>
@@ -67,8 +67,8 @@
                                     <segue destination="qwP-f7-oqO" kind="show" id="0wv-Jp-BRg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa0-2J-dzB">
-                                <rect key="frame" x="99" y="171.33333333333334" width="197" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa0-2J-dzB">
+                                <rect key="frame" x="99.666666666666686" y="171" width="194" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="194" id="EgM-QE-YLd"/>
                                     <constraint firstAttribute="height" constant="45" id="I44-E4-C38"/>
@@ -79,7 +79,7 @@
                                 <state key="normal" title="Creature"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA3-5I-ouH">
-                                <rect key="frame" x="99.666666666666686" y="226.33333333333334" width="194" height="45.000000000000028"/>
+                                <rect key="frame" x="99.666666666666686" y="226" width="194" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="194" id="eOh-7R-dsa"/>
                                     <constraint firstAttribute="height" constant="45" id="fpV-WB-rFq"/>
@@ -90,49 +90,57 @@
                                 <state key="normal" title="Items"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrl-H1-JfT">
-                                <rect key="frame" x="138" y="281.33333333333331" width="117" height="45"/>
+                                <rect key="frame" x="99.666666666666686" y="281" width="194" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="d4X-wk-X4x"/>
+                                    <constraint firstAttribute="height" constant="45" id="qAr-LT-07a"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <color key="tintColor" red="0.32935070991516113" green="0.14400672912597656" blue="0.069984607398509979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Weapons"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezN-co-1zy">
-                                <rect key="frame" x="100" y="336.33333333333331" width="194" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezN-co-1zy">
+                                <rect key="frame" x="99.666666666666686" y="336" width="194" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="2kp-5h-PFw"/>
+                                    <constraint firstAttribute="height" constant="45" id="78j-2D-pMZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <color key="tintColor" red="0.24390387535095215" green="0.078233994543552399" blue="0.39099693298339844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Treasure"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-VP-ZOO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monster" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-VP-ZOO">
                                 <rect key="frame" x="55" y="119.66666666666669" width="38" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="8tG-EU-7TI"/>
                                     <constraint firstAttribute="width" constant="38" id="irH-xk-szn"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVz-k4-XVw">
-                                <rect key="frame" x="55" y="175" width="38" height="38"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horse" translatesAutoresizingMaskIntoConstraints="NO" id="UVz-k4-XVw">
+                                <rect key="frame" x="55.666666666666657" y="174.66666666666666" width="38" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="IIK-A2-7XL"/>
                                     <constraint firstAttribute="height" constant="38" id="c7R-sK-AUK"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-7n-ABO">
-                                <rect key="frame" x="55" y="230" width="38" height="38"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pear" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-7n-ABO">
+                                <rect key="frame" x="55" y="229.66666666666666" width="38" height="37.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="7Z5-BD-SSa"/>
                                     <constraint firstAttribute="width" constant="38" id="Nyf-rZ-9ip"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VN9-SV-V4M">
-                                <rect key="frame" x="55" y="285" width="38" height="38"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sword" translatesAutoresizingMaskIntoConstraints="NO" id="VN9-SV-V4M">
+                                <rect key="frame" x="55.666666666666657" y="284.66666666666669" width="38" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="6dU-lO-ai6"/>
                                     <constraint firstAttribute="width" constant="38" id="u5j-I0-iiX"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-Y1-ded">
-                                <rect key="frame" x="55" y="340" width="38" height="38"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treasure-chest" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-Y1-ded">
+                                <rect key="frame" x="54.666666666666657" y="339.66666666666669" width="38" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="int-wW-rww"/>
                                     <constraint firstAttribute="width" constant="38" id="mm6-10-FZa"/>
@@ -151,16 +159,17 @@
                             <constraint firstItem="PZt-VP-ZOO" firstAttribute="centerY" secondItem="tR2-5r-RXD" secondAttribute="centerY" id="MAV-sH-oh2"/>
                             <constraint firstItem="4v2-7n-ABO" firstAttribute="centerY" secondItem="xA3-5I-ouH" secondAttribute="centerY" id="MSJ-gI-FGV"/>
                             <constraint firstItem="VN9-SV-V4M" firstAttribute="centerY" secondItem="Rrl-H1-JfT" secondAttribute="centerY" id="Mk6-Ze-ya6"/>
-                            <constraint firstItem="Rrl-H1-JfT" firstAttribute="leading" secondItem="VN9-SV-V4M" secondAttribute="trailing" constant="45" id="NCK-eH-Awu"/>
+                            <constraint firstItem="Rrl-H1-JfT" firstAttribute="leading" secondItem="VN9-SV-V4M" secondAttribute="trailing" constant="6" id="NCK-eH-Awu"/>
                             <constraint firstItem="Rrl-H1-JfT" firstAttribute="centerX" secondItem="Yr0-tb-F4O" secondAttribute="centerX" id="OA8-eY-w5J"/>
                             <constraint firstItem="tR2-5r-RXD" firstAttribute="leading" secondItem="PZt-VP-ZOO" secondAttribute="trailing" constant="6.6666666666666856" id="OK6-1R-RTS"/>
-                            <constraint firstItem="PZt-VP-ZOO" firstAttribute="top" secondItem="f05-V5-HW7" secondAttribute="top" constant="16.670000000000002" id="ULV-8r-vKE"/>
+                            <constraint firstItem="ezN-co-1zy" firstAttribute="centerX" secondItem="Yr0-tb-F4O" secondAttribute="centerX" id="S1o-Ae-e3W"/>
                             <constraint firstItem="Xa0-2J-dzB" firstAttribute="top" secondItem="tR2-5r-RXD" secondAttribute="bottom" constant="10" id="Yt1-42-5Bk"/>
                             <constraint firstItem="UVz-k4-XVw" firstAttribute="centerY" secondItem="Xa0-2J-dzB" secondAttribute="centerY" id="cbn-PA-ZPf"/>
                             <constraint firstItem="PZt-VP-ZOO" firstAttribute="centerY" secondItem="tR2-5r-RXD" secondAttribute="centerY" id="hZy-30-IGI"/>
                             <constraint firstItem="Rrl-H1-JfT" firstAttribute="top" secondItem="xA3-5I-ouH" secondAttribute="bottom" constant="10" id="hc9-Wx-yL0"/>
                             <constraint firstItem="4v2-7n-ABO" firstAttribute="centerY" secondItem="xA3-5I-ouH" secondAttribute="centerY" id="iyE-Uw-Hu2"/>
                             <constraint firstItem="xA3-5I-ouH" firstAttribute="leading" secondItem="4v2-7n-ABO" secondAttribute="trailing" constant="6.6666666666666856" id="m9b-pv-yZf"/>
+                            <constraint firstItem="Xa0-2J-dzB" firstAttribute="centerX" secondItem="Yr0-tb-F4O" secondAttribute="centerX" id="pST-G7-X7F"/>
                             <constraint firstItem="xA3-5I-ouH" firstAttribute="centerX" secondItem="Yr0-tb-F4O" secondAttribute="centerX" id="pjR-Zl-4eJ"/>
                             <constraint firstItem="jDa-Y1-ded" firstAttribute="centerY" secondItem="ezN-co-1zy" secondAttribute="centerY" id="rea-ua-uCV"/>
                             <constraint firstItem="VN9-SV-V4M" firstAttribute="centerY" secondItem="Rrl-H1-JfT" secondAttribute="centerY" id="tTq-rT-MTT"/>
@@ -171,10 +180,15 @@
                     <navigationItem key="navigationItem" title="Compendium" id="wcy-2b-6xo"/>
                     <connections>
                         <outlet property="creatureButton" destination="Xa0-2J-dzB" id="N5b-2W-0lH"/>
+                        <outlet property="creatureIcon" destination="UVz-k4-XVw" id="jry-hr-6ZK"/>
+                        <outlet property="itemIcon" destination="4v2-7n-ABO" id="INu-uR-krT"/>
                         <outlet property="itemsButton" destination="xA3-5I-ouH" id="OoW-qt-rIp"/>
                         <outlet property="monsterButton" destination="tR2-5r-RXD" id="QMB-x6-eMb"/>
+                        <outlet property="monsterIcon" destination="PZt-VP-ZOO" id="d3U-Tl-r9v"/>
                         <outlet property="treasureButton" destination="ezN-co-1zy" id="z13-wM-wDw"/>
+                        <outlet property="treasureIcon" destination="jDa-Y1-ded" id="EaD-xH-mAA"/>
                         <outlet property="weaponsButton" destination="Rrl-H1-JfT" id="Q8u-FB-r3m"/>
+                        <outlet property="weaponsIcon" destination="VN9-SV-V4M" id="YDc-gU-mVK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfe-4a-Wa0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -668,8 +682,13 @@
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="checklist" catalog="system" width="128" height="107"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="horse" width="700" height="700"/>
+        <image name="monster" width="512" height="512"/>
+        <image name="pear" width="512" height="512"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil" catalog="system" width="128" height="121"/>
+        <image name="sword" width="700" height="700"/>
+        <image name="treasure-chest" width="512" height="512"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
