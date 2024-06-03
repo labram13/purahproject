@@ -31,6 +31,9 @@
 		1FC4FD2E2C0E2AAF00EB5774 /* HyliaSerifBeta-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4FD2D2C0E2AAF00EB5774 /* HyliaSerifBeta-Regular.otf */; };
 		1FC4FD2F2C0E2AAF00EB5774 /* HyliaSerifBeta-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4FD2D2C0E2AAF00EB5774 /* HyliaSerifBeta-Regular.otf */; };
 		1FC4FD302C0E2AAF00EB5774 /* HyliaSerifBeta-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4FD2D2C0E2AAF00EB5774 /* HyliaSerifBeta-Regular.otf */; };
+		1FC4FD322C0E3AEA00EB5774 /* WeaponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4FD312C0E3AEA00EB5774 /* WeaponsViewController.swift */; };
+		1FC4FD332C0E3AEA00EB5774 /* WeaponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4FD312C0E3AEA00EB5774 /* WeaponsViewController.swift */; };
+		1FC4FD342C0E3AEA00EB5774 /* WeaponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4FD312C0E3AEA00EB5774 /* WeaponsViewController.swift */; };
 		1FDAA34E2BFE4E93003D9EFE /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */; };
 		1FDAA3502BFE4EA3003D9EFE /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +74,7 @@
 		1FC4FD252C0E287F00EB5774 /* MonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterViewController.swift; sourceTree = "<group>"; };
 		1FC4FD292C0E289400EB5774 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		1FC4FD2D2C0E2AAF00EB5774 /* HyliaSerifBeta-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HyliaSerifBeta-Regular.otf"; sourceTree = "<group>"; };
+		1FC4FD312C0E3AEA00EB5774 /* WeaponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsViewController.swift; sourceTree = "<group>"; };
 		1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */,
+				1FC4FD312C0E3AEA00EB5774 /* WeaponsViewController.swift */,
 				1FC4FD212C0E283000EB5774 /* HandleDataModel.swift */,
 				1FC4FD252C0E287F00EB5774 /* MonsterViewController.swift */,
 				1FC4FD1D2C0E27B600EB5774 /* TableViewCell.swift */,
@@ -324,6 +329,7 @@
 				1FDAA34E2BFE4E93003D9EFE /* SearchController.swift in Sources */,
 				1FC4FD262C0E287F00EB5774 /* MonsterViewController.swift in Sources */,
 				1FDAA3502BFE4EA3003D9EFE /* TodoController.swift in Sources */,
+				1FC4FD322C0E3AEA00EB5774 /* WeaponsViewController.swift in Sources */,
 				1FC4FD222C0E283000EB5774 /* HandleDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +342,7 @@
 				1FC4FD272C0E287F00EB5774 /* MonsterViewController.swift in Sources */,
 				1FC4FD1F2C0E27B600EB5774 /* TableViewCell.swift in Sources */,
 				1FC4FD232C0E283000EB5774 /* HandleDataModel.swift in Sources */,
+				1FC4FD332C0E3AEA00EB5774 /* WeaponsViewController.swift in Sources */,
 				1FC4FD2B2C0E289400EB5774 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +356,7 @@
 				1F5D0C412BFBC2990026BFA5 /* purahprojectUITestsLaunchTests.swift in Sources */,
 				1FC4FD282C0E287F00EB5774 /* MonsterViewController.swift in Sources */,
 				1FC4FD242C0E283000EB5774 /* HandleDataModel.swift in Sources */,
+				1FC4FD342C0E3AEA00EB5774 /* WeaponsViewController.swift in Sources */,
 				1FC4FD2C2C0E289400EB5774 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
