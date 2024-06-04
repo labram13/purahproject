@@ -97,7 +97,36 @@ class DetailsViewController: UIViewController {
         } else if let material = material {
             
         } else if let creature = creature {
-            
+            nameLabel.text = creature.name.capitalized
+            descriptionLabel.text = creature.description
+            if let imageUrl = URL(string: creature.image) {
+                imageView.loadImage(from: imageUrl)
+            }
+            if let locations = creature.common_locations { let joinedLocations = locations.joined(separator: "\n")
+                    locationsLabel.text = joinedLocations
+            } else {
+                locationsLabel.text = "Unknown"
+            }
+            if creature.edible {
+                // food
+                let cooking = creature.cooking_effect
+                detailsLabel.text = cooking
+                detailsTitleLabel.text = "Drops"
+            } else {
+                // not food
+                if let drops = creature.drops  {
+                    detailsTitleLabel.text = "Drops"
+                    let joinedDrops = drops.joined(separator: "\n")
+                    if joinedDrops.isEmpty {
+                        detailsLabel.text = "None"
+                    } else {
+                        detailsLabel.text = joinedDrops.capitalized
+                    }
+                    detailsTitleLabel.text = "Drops"
+                } else {
+                    detailsLabel.text = "No Drops"
+                }
+            }
         } else if let treasure = treasure {
             nameLabel.text = treasure.name.capitalized
             descriptionLabel.text = treasure.description
