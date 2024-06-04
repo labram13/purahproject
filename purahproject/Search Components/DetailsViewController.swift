@@ -141,7 +141,7 @@ class DetailsViewController: UIViewController {
 
                 }
             }
-            detailsLabel.text = effectsString
+            detailsLabel.text = effectsString.capitalized
 
             
         } else if let creature = creature {
@@ -161,7 +161,7 @@ class DetailsViewController: UIViewController {
                 if let hearts = creature.hearts_recovered {
                     cooking += "Hearts Recovered: \(String(hearts))"
                 }
-                detailsLabel.text = cooking
+                detailsLabel.text = cooking.capitalized
                 detailsTitleLabel.text = "Effects"
             } else {
                 // not food
