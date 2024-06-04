@@ -25,17 +25,30 @@ class MonsterViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var monstersData: HandleData<Monster>!
     
+    private var fileURL: URL? {
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            return dir.appendingPathComponent("monsters.json")
+        }
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        monstersData = HandleData<Monster>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/monsters?game=1")
-        monstersData.fetch { [weak self] in
-            DispatchQueue.main.async {
-                self?.monstersData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
-                self?.monsterTableView.reloadData()
-                // Debugging: Verify data fetch
-                if let monsters = self?.monstersData.data {
-                    print("Fetched \(monsters.count) monsters")
+        if FileManager.default.fileExists(atPath: fileURL!.path) {
+            monstersData = HandleData<Monster>(fileURL!)
+            self.monstersData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+            self.monsterTableView.reloadData()
+        } else {
+            monstersData = HandleData<Monster>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/monsters?game=1")
+            monstersData.fetch { [weak self] in
+                DispatchQueue.main.async {
+                    self?.monstersData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+                    self?.monsterTableView.reloadData()
+                    // Debugging: Verify data fetch
+                    if let equipment = self?.monstersData.data {
+                        print("Fetched \(equipment.count) monsters")
+                    }
                 }
             }
         }

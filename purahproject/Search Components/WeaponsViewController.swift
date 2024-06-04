@@ -13,20 +13,34 @@ class WeaponsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var weaponsData: HandleData<Equipment>!
     
+    private var fileURL: URL? {
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            return dir.appendingPathComponent("equipment.json")
+        }
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        weaponsData = HandleData<Equipment>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/equipment?game=1")
-        weaponsData.fetch { [weak self] in
-            DispatchQueue.main.async {
-                self?.weaponsData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
-                self?.weaponsTableView.reloadData()
-                // Debugging: Verify data fetch
-                if let monsters = self?.weaponsData.data {
-                    print("Fetched \(monsters.count) monsters")
+        if FileManager.default.fileExists(atPath: fileURL!.path) {
+            weaponsData = HandleData<Equipment>(fileURL!)
+            self.weaponsData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+            self.weaponsTableView.reloadData()
+        } else {
+            weaponsData = HandleData<Equipment>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/equipment?game=1")
+            weaponsData.fetch { [weak self] in
+                DispatchQueue.main.async {
+                    self?.weaponsData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+                    self?.weaponsTableView.reloadData()
+                    // Debugging: Verify data fetch
+                    if let equipment = self?.weaponsData.data {
+                        print("Fetched \(equipment.count) monsters")
+                    }
                 }
             }
         }
+        
+
         
         weaponsTableView.dataSource = self
         weaponsTableView.delegate = self

@@ -12,18 +12,33 @@ class TreasureViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var treasureTableView: UITableView!
     var treasureData: HandleData<Treasure>!
     
+    private var fileURL: URL? {
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            return dir.appendingPathComponent("treasure.json")
+        }
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        treasureData = HandleData<Treasure>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/treasure")
-        treasureData.fetch { [weak self] in DispatchQueue.main.async {
-                self?.treasureData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
-                self?.treasureTableView.reloadData()
-                // Debugging: Verify data fetch
-                if let treasure = self?.treasureData.data {
-                    print("Fetched \(treasure.count) monsters")
+        if FileManager.default.fileExists(atPath: fileURL!.path) {
+            treasureData = HandleData<Treasure>(fileURL!)
+            self.treasureData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+            self.treasureTableView.reloadData()
+        } else {
+            treasureData = HandleData<Treasure>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/treasure?game=1")
+            treasureData.fetch { [weak self] in
+                DispatchQueue.main.async {
+                    self?.treasureData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+                    self?.treasureTableView.reloadData()
+                    // Debugging: Verify data fetch
+                    if let equipment = self?.treasureData.data {
+                        print("Fetched \(equipment.count) treasures")
+                    }
                 }
             }
         }
+
         treasureTableView.dataSource = self
         treasureTableView.delegate = self
         

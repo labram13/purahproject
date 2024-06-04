@@ -11,16 +11,30 @@ class CreaturesViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var creaturesTableView: UITableView!
     var creatureData: HandleData<Creature>!
+    private var fileURL: URL? {
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            return dir.appendingPathComponent("creatures.json")
+        }
+        return nil
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        creatureData = HandleData<Creature>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/creatures")
-        creatureData.fetch { [weak self] in DispatchQueue.main.async {
-                self?.creatureData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
-                self?.creaturesTableView.reloadData()
-                // Debugging: Verify data fetch
-                if let creatures = self?.creatureData.data {
-                    print("Fetched \(creatures.count) monsters")
+        if FileManager.default.fileExists(atPath: fileURL!.path) {
+            creatureData = HandleData<Creature>(fileURL!)
+            self.creatureData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+            self.creaturesTableView.reloadData()
+        } else {
+            creatureData = HandleData<Creature>("https://botw-compendium.herokuapp.com/api/v3/compendium/category/creatures?game=1")
+            creatureData.fetch { [weak self] in
+                DispatchQueue.main.async {
+                    self?.creatureData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
+                    self?.creaturesTableView.reloadData()
+                    // Debugging: Verify data fetch
+                    if let equipment = self?.creatureData.data {
+                        print("Fetched \(equipment.count) creatures")
+                    }
                 }
             }
         }
