@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             
             // Set initial global font for UINavigationBar title
-            if let zeldaFont = UIFont(name: "HyliaSerifBeta-Regular", size: 30) {
+            if let zeldaFont = UIFont(name: "HyliaSerifBeta-Regular", size: 27) {
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: zeldaFont,
                     .foregroundColor: UIColor.black // Change the color if needed

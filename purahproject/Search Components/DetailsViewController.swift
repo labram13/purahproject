@@ -31,7 +31,6 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var detailsTitleLabel: UILabel!
     @IBOutlet weak var detailsLabel: UITextView!
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var locationsTitleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +38,12 @@ class DetailsViewController: UIViewController {
            nameLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: nameSize)
         let detailsSize = detailsTitleLabel.font.pointSize
            detailsTitleLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: detailsSize)
+        let detailItems = detailsLabel.font!.pointSize
+        detailsLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: detailItems)
         let locationsSize = locationsTitleLabel.font.pointSize
            locationsTitleLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: locationsSize)
+        let locationItemSize = locationsLabel.font!.pointSize
+           locationsLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: locationItemSize)
         
         if let monster = monster {
             nameLabel.text = monster.name.capitalized
@@ -95,6 +98,32 @@ class DetailsViewController: UIViewController {
             detailsLabel.text = weaponStats
             
         } else if let material = material {
+            nameLabel.text = material.name
+            descriptionLabel.text = material.description
+            if let imageUrl = URL(string: material.image) {
+                imageView.loadImage(from: imageUrl)
+            }
+            
+            if let locations = material.common_locations { let joinedLocations = locations.joined(separator: "\n")
+                    locationsLabel.text = joinedLocations
+            } else {
+                locationsLabel.text = "Unknown"
+            }
+            
+            detailsTitleLabel.text = "Cooking Effect"
+            var effectsString = ""
+            if let cooking = material.cooking_effect {
+                effectsString += "\(cooking)"
+            }
+            if let hearts = material.hearts_recovered {
+                if effectsString.isEmpty {
+                    effectsString += "Hearts Recovered: \(String(hearts))"
+                } else {
+                    effectsString += "\nHearts Recovered: \(String(hearts))"
+
+                }
+            }
+            detailsLabel.text = effectsString
             
         } else if let creature = creature {
             nameLabel.text = creature.name.capitalized
@@ -109,9 +138,12 @@ class DetailsViewController: UIViewController {
             }
             if creature.edible {
                 // food
-                let cooking = creature.cooking_effect
+                var cooking = ("\(creature.cooking_effect!)\n")
+                if let hearts = creature.hearts_recovered {
+                    cooking += "Hearts Recovered: \(String(hearts))"
+                }
                 detailsLabel.text = cooking
-                detailsTitleLabel.text = "Drops"
+                detailsTitleLabel.text = "Effects"
             } else {
                 // not food
                 if let drops = creature.drops  {
@@ -124,7 +156,8 @@ class DetailsViewController: UIViewController {
                     }
                     detailsTitleLabel.text = "Drops"
                 } else {
-                    detailsLabel.text = "No Drops"
+                    detailsTitleLabel.text = "Drops"
+                    detailsLabel.text = "None"
                 }
             }
         } else if let treasure = treasure {

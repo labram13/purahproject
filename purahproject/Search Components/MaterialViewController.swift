@@ -15,7 +15,7 @@ class MaterialViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private var fileURL: URL? {
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            return dir.appendingPathComponent("treasure.json")
+            return dir.appendingPathComponent("material.json")
         }
         return nil
     }
@@ -35,7 +35,7 @@ class MaterialViewController: UIViewController, UITableViewDataSource, UITableVi
                     self?.materialTableView.reloadData()
                     // Debugging: Verify data fetch
                     if let materials = self?.materialData.data {
-                        print("Fetched \(materials.count) treasures")
+                        print("Fetched \(materials.count) materials")
                     }
                 }
             }
@@ -54,7 +54,7 @@ class MaterialViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         NSLog("Configuring cell for row at index: \(indexPath.row)")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "treasureCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "materialCell", for: indexPath) as! TableViewCell
         let material = materialData.data[indexPath.row]
         cell.materialNameLabel.text = material.name.capitalized
         if let imageUrl = URL(string: material.image) {

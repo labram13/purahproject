@@ -33,12 +33,12 @@ struct Equipment: Codable {
 struct Material: Codable {
     let name: String
     let id: Int
-    let catergory: String
+    let category: String
     let description: String
     let image: String
     let common_locations: [String]?
-    let hearts_recovered: Float
-    let cooking_effect: String
+    let hearts_recovered: Float?
+    let cooking_effect: String?
     let dlc: Bool
 }
 
