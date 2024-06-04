@@ -69,10 +69,31 @@ struct Treasure: Codable {
 // HandleData class to fetch data
 class HandleData<T: Codable> {
     var data: [T] = []
-    let url: String
+    var url: String = ""
+    var fileURL: URL?
+    
     
     init(_ url: String) {
         self.url = url
+    }
+    
+    init(_ fileURL: URL) {
+        self.fileURL = fileURL
+    }
+    
+    func fetchDownload(completion: @escaping () -> Void) {
+        do {
+            if fileURL != nil {
+                if FileManager.default.fileExists(atPath: fileURL!.path) {
+                    let fileData = try Data(contentsOf: fileURL!)
+                    let decodedData = try JSONDecoder().decode([String: [T]].self, from: fileData)
+                    self.data = decodedData["data"] ?? []
+                    completion()
+                }
+            }
+        } catch {
+            print("Error: \(error)")
+        }
     }
     
     func fetch(completion: @escaping () -> Void) {
