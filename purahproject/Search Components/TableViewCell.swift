@@ -17,5 +17,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var treasureImage: UIImageView!
     @IBOutlet weak var creatureImage: UIImageView!
     @IBOutlet weak var creatureNameLabel: UILabel!
-    
+    @IBOutlet weak var materialImage: UIImageView!
+    @IBOutlet weak var materialNameLabel: UILabel!
 }
