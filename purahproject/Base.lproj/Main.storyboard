@@ -274,7 +274,7 @@
                                                     </connections>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-uV-Ra6">
-                                                    <rect key="frame" x="326" y="11" width="48" height="35"/>
+                                                    <rect key="frame" x="326.33333333333331" y="11" width="47.666666666666686" height="35"/>
                                                     <color key="tintColor" systemColor="systemGreenColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system"/>
@@ -438,6 +438,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Now-cy-YOe" firstAttribute="top" secondItem="mF6-4l-aYc" secondAttribute="bottom" constant="8" symbolic="YES" id="0Cr-uY-j4s"/>
+                            <constraint firstItem="nmc-rc-JvC" firstAttribute="leading" secondItem="ZLe-bh-PNj" secondAttribute="leading" id="96b-ov-hxU"/>
                             <constraint firstItem="Now-cy-YOe" firstAttribute="leading" secondItem="ZLe-bh-PNj" secondAttribute="leading" constant="324" id="ER6-hG-vhl"/>
                             <constraint firstItem="nmc-rc-JvC" firstAttribute="leading" secondItem="ZLe-bh-PNj" secondAttribute="leading" id="KGX-JQ-Pzg"/>
                             <constraint firstItem="ZLe-bh-PNj" firstAttribute="trailing" secondItem="mF6-4l-aYc" secondAttribute="trailing" constant="16" id="LUX-gq-AQ3"/>
@@ -450,6 +451,7 @@
                             <constraint firstItem="nmc-rc-JvC" firstAttribute="trailing" secondItem="ZLe-bh-PNj" secondAttribute="trailing" id="ifD-u7-g90"/>
                             <constraint firstItem="ZLe-bh-PNj" firstAttribute="trailing" secondItem="dEC-ZT-R8b" secondAttribute="trailing" constant="245" id="jZn-Vf-Rvn"/>
                             <constraint firstItem="mF6-4l-aYc" firstAttribute="top" secondItem="dEC-ZT-R8b" secondAttribute="bottom" constant="8" symbolic="YES" id="kvN-9R-Ac0"/>
+                            <constraint firstItem="nmc-rc-JvC" firstAttribute="trailing" secondItem="ZLe-bh-PNj" secondAttribute="trailing" id="mRx-YJ-eIt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -459,9 +461,9 @@
                                 <exclude reference="dEC-ZT-R8b"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="LUX-gq-AQ3"/>
-                                <exclude reference="OKh-Ap-VQl"/>
                                 <exclude reference="jZn-Vf-Rvn"/>
+                                <exclude reference="OKh-Ap-VQl"/>
+                                <exclude reference="LUX-gq-AQ3"/>
                                 <exclude reference="Y2D-Rm-oeT"/>
                                 <exclude reference="cyc-m0-x3l"/>
                                 <exclude reference="WSI-BT-zsg"/>
@@ -482,9 +484,9 @@
                                 <include reference="dEC-ZT-R8b"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="LUX-gq-AQ3"/>
-                                <include reference="OKh-Ap-VQl"/>
                                 <include reference="jZn-Vf-Rvn"/>
+                                <include reference="OKh-Ap-VQl"/>
+                                <include reference="LUX-gq-AQ3"/>
                                 <include reference="Y2D-Rm-oeT"/>
                                 <include reference="cyc-m0-x3l"/>
                                 <include reference="WSI-BT-zsg"/>
