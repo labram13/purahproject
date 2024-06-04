@@ -48,10 +48,11 @@ struct Creature: Codable {
     let category: String
     let description: String
     let image: String
-    let cooking_effect: String
+    let cooking_effect: String?
     let common_locations: [String]?
     let edible: Bool
-    let hearts_recovered: Float
+    let drops: [String]?
+    let hearts_recovered: Float?
     let dlc: Bool
 }
 

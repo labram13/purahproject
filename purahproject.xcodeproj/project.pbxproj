@@ -37,6 +37,7 @@
 		1FDAA34E2BFE4E93003D9EFE /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */; };
 		1FDAA3502BFE4EA3003D9EFE /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */; };
 		7695D09F2C0E714500D48F5C /* TreasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695D09E2C0E714500D48F5C /* TreasureViewController.swift */; };
+		7695D0A12C0E8C6800D48F5C /* CreaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695D0A02C0E8C6800D48F5C /* CreaturesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		1FDAA34D2BFE4E93003D9EFE /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		1FDAA34F2BFE4EA3003D9EFE /* TodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 		7695D09E2C0E714500D48F5C /* TreasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureViewController.swift; sourceTree = "<group>"; };
+		7695D0A02C0E8C6800D48F5C /* CreaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaturesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				1FC4FD1D2C0E27B600EB5774 /* TableViewCell.swift */,
 				1FC4FD292C0E289400EB5774 /* DetailsViewController.swift */,
 				7695D09E2C0E714500D48F5C /* TreasureViewController.swift */,
+				7695D0A02C0E8C6800D48F5C /* CreaturesViewController.swift */,
 			);
 			path = "Search Components";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				1FC4FD2A2C0E289400EB5774 /* DetailsViewController.swift in Sources */,
 				1F5D0C202BFBC2970026BFA5 /* SceneDelegate.swift in Sources */,
 				1FC4FD1E2C0E27B600EB5774 /* TableViewCell.swift in Sources */,
+				7695D0A12C0E8C6800D48F5C /* CreaturesViewController.swift in Sources */,
 				1FDAA34E2BFE4E93003D9EFE /* SearchController.swift in Sources */,
 				1FC4FD262C0E287F00EB5774 /* MonsterViewController.swift in Sources */,
 				1FDAA3502BFE4EA3003D9EFE /* TodoController.swift in Sources */,
