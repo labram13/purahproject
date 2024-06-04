@@ -139,6 +139,7 @@ class DiaryController: UIViewController, UITableViewDelegate, UITableViewDataSou
             tableView.reloadData()
             saveEntries()
             addEntryText.text = ""
+            dismissKeyboard()
         }
     }
     
