@@ -32,8 +32,23 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var detailsLabel: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var locationsTitleLabel: UILabel!
+    
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        assignbackground()
+
+
         let nameSize = nameLabel.font.pointSize
            nameLabel.font = UIFont(name: "HyliaSerifBeta-Regular", size: nameSize)
         let detailsSize = detailsTitleLabel.font.pointSize
@@ -68,9 +83,10 @@ class DetailsViewController: UIViewController {
             if let imageUrl = URL(string: monster.image) {
                 imageView.loadImage(from: imageUrl)
             }
+            ()
+
             
         } else if let equipment = equipment {
-            print(equipment)
             nameLabel.text = equipment.name.capitalized
             if let imageUrl = URL(string: equipment.image) {
                 imageView.loadImage(from: imageUrl)
@@ -96,6 +112,8 @@ class DetailsViewController: UIViewController {
                 weaponStats += "Defense: 0\n"
             }
             detailsLabel.text = weaponStats
+            
+
             
         } else if let material = material {
             nameLabel.text = material.name
@@ -124,6 +142,7 @@ class DetailsViewController: UIViewController {
                 }
             }
             detailsLabel.text = effectsString
+
             
         } else if let creature = creature {
             nameLabel.text = creature.name.capitalized
@@ -160,6 +179,7 @@ class DetailsViewController: UIViewController {
                     detailsLabel.text = "None"
                 }
             }
+
         } else if let treasure = treasure {
             nameLabel.text = treasure.name.capitalized
             descriptionLabel.text = treasure.description
@@ -185,8 +205,12 @@ class DetailsViewController: UIViewController {
             }
         } else {
             NSLog("No data")
+            
         }
+
+        
     }
+    
 
     
     

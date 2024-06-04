@@ -26,7 +26,21 @@ class SearchController: UIViewController {
         super.viewDidLoad()
         setButtonLabelFonts()
        
-}
+        assignbackground()
+        
+    }
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
+    }
 
     func setButtonLabelFonts() {
         if let button = monsterButton {

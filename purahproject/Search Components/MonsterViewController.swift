@@ -46,25 +46,35 @@ class MonsterViewController: UIViewController, UITableViewDataSource, UITableVie
                     self?.monstersData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
                     self?.monsterTableView.reloadData()
                     // Debugging: Verify data fetch
-                    if let equipment = self?.monstersData.data {
-                        print("Fetched \(equipment.count) monsters")
-                    }
+                   
                 }
             }
         }
         
         monsterTableView.dataSource = self
         monsterTableView.delegate = self
+        assignbackground()
+        
+    }
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = monstersData.data.count
-        NSLog("Number of rows in section: \(count)")
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        NSLog("Configuring cell for row at index: \(indexPath.row)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "monsterCell", for: indexPath) as! TableViewCell
         let monster = monstersData.data[indexPath.row]
         cell.monsterNameLabel.text = monster.name.capitalized

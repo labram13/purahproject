@@ -33,9 +33,7 @@ class WeaponsViewController: UIViewController, UITableViewDataSource, UITableVie
                     self?.weaponsData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
                     self?.weaponsTableView.reloadData()
                     // Debugging: Verify data fetch
-                    if let equipment = self?.weaponsData.data {
-                        print("Fetched \(equipment.count) monsters")
-                    }
+                   
                 }
             }
         }
@@ -44,26 +42,35 @@ class WeaponsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         weaponsTableView.dataSource = self
         weaponsTableView.delegate = self
+        assignbackground()
+        
+    }
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = weaponsData.data.count
-        NSLog("Number of rows in section: \(count)")
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        NSLog("Configuring cell for row at index: \(indexPath.row)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "monsterCell", for: indexPath) as! TableViewCell
         let equipment = weaponsData.data[indexPath.row]
         cell.equipmentNameLabel.text = equipment.name.capitalized
         
         if let imageUrl = URL(string: equipment.image) {
             cell.equipmentImage.loadImage(from: imageUrl)
-        } else {
-            NSLog("Invalid URL string: \(equipment.image)")
-        }
-        
+        } 
         return cell
     }
     

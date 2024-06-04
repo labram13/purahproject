@@ -11,6 +11,7 @@ class TodoController: UIViewController, UITableViewDataSource, UITableViewDelega
     private let table: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.backgroundView = UIImageView(image: UIImage(named: "wallpaper"))
         return table
     }()
     
@@ -18,13 +19,29 @@ class TodoController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        assignbackground()
         self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
         title = "To Do List"
         view.addSubview(table)
         table.dataSource = self
         table.delegate = self
-       
+        assignbackground()
+        
     }
+    
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
+    }
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -65,6 +82,7 @@ class TodoController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.font = UIFont(name: "HyliaSerifBeta-Regular", size: 17)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.backgroundColor = .clear
         return cell
     }
     

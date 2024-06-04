@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="coo-a3-GoA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="coo-a3-GoA" secondAttribute="height" multiplier="512:683" id="iUq-Uj-gq7"/>
                                 </constraints>
@@ -50,14 +50,14 @@
                                 <exclude reference="coo-a3-GoA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="BrE-po-5bA"/>
-                                <exclude reference="lG9-k1-S3L"/>
-                                <exclude reference="ngU-Jz-Wbv"/>
-                                <exclude reference="v9A-a3-G3B"/>
                                 <exclude reference="5sg-P4-IgZ"/>
                                 <exclude reference="pWE-5h-WQI"/>
                                 <exclude reference="pwW-2Y-nBo"/>
                                 <exclude reference="ynb-MY-jR4"/>
+                                <exclude reference="BrE-po-5bA"/>
+                                <exclude reference="lG9-k1-S3L"/>
+                                <exclude reference="ngU-Jz-Wbv"/>
+                                <exclude reference="v9A-a3-G3B"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -65,10 +65,10 @@
                                 <include reference="coo-a3-GoA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="lG9-k1-S3L"/>
-                                <include reference="ngU-Jz-Wbv"/>
                                 <include reference="pWE-5h-WQI"/>
                                 <include reference="pwW-2Y-nBo"/>
+                                <include reference="lG9-k1-S3L"/>
+                                <include reference="ngU-Jz-Wbv"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -76,10 +76,10 @@
                                 <include reference="coo-a3-GoA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="BrE-po-5bA"/>
-                                <include reference="v9A-a3-G3B"/>
                                 <include reference="5sg-P4-IgZ"/>
                                 <include reference="ynb-MY-jR4"/>
+                                <include reference="BrE-po-5bA"/>
+                                <include reference="v9A-a3-G3B"/>
                             </mask>
                         </variation>
                     </view>

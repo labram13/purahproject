@@ -33,10 +33,7 @@ class MaterialViewController: UIViewController, UITableViewDataSource, UITableVi
                 DispatchQueue.main.async {
                     self?.materialData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
                     self?.materialTableView.reloadData()
-                    // Debugging: Verify data fetch
-                    if let materials = self?.materialData.data {
-                        print("Fetched \(materials.count) materials")
-                    }
+                    
                 }
             }
         }
@@ -44,16 +41,28 @@ class MaterialViewController: UIViewController, UITableViewDataSource, UITableVi
         materialTableView.dataSource = self
         materialTableView.delegate = self
         
+        assignbackground()
+        
+    }
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = materialData.data.count
-        NSLog("Number of rows in section: \(count)")
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        NSLog("Configuring cell for row at index: \(indexPath.row)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "materialCell", for: indexPath) as! TableViewCell
         let material = materialData.data[indexPath.row]
         cell.materialNameLabel.text = material.name.capitalized

@@ -77,11 +77,34 @@ class DiaryController: UIViewController, UITableViewDelegate, UITableViewDataSou
         if let currentFont = addEntryButton.titleLabel?.font {
             let customFont = UIFont(name: "HyliaSerifBeta-Regular", size: currentFont.pointSize)
             addEntryButton.titleLabel?.font = customFont
-            print("Custom font applied: \(customFont?.fontName ?? "Unknown")")
-        } else {
-            print("Custom font not found")
-        }
+        } 
         
+        //Looks for single or multiple taps.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+            //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+            //tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
+        assignbackground()
+        
+    }
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
+    }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     private func loadEntries() {

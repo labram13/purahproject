@@ -31,16 +31,27 @@ class CreaturesViewController: UIViewController, UITableViewDataSource, UITableV
                 DispatchQueue.main.async {
                     self?.creatureData.data.sort { $0.name.lowercased() < $1.name.lowercased() }
                     self?.creaturesTableView.reloadData()
-                    // Debugging: Verify data fetch
-                    if let equipment = self?.creatureData.data {
-                        print("Fetched \(equipment.count) creatures")
-                    }
+                   
                 }
             }
         }
         creaturesTableView.dataSource = self
         creaturesTableView.delegate = self
 
+        assignbackground()
+        
+    }
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

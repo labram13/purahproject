@@ -42,6 +42,20 @@ class TreasureViewController: UIViewController, UITableViewDataSource, UITableVi
         treasureTableView.dataSource = self
         treasureTableView.delegate = self
         
+        assignbackground()
+        
+    }
+    func assignbackground(){
+            let background = UIImage(named: "wallpaper")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +65,6 @@ class TreasureViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        NSLog("Configuring cell for row at index: \(indexPath.row)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "treasureCell", for: indexPath) as! TableViewCell
         let treasure = treasureData.data[indexPath.row]
         cell.treasureNameLabel.text = treasure.name.capitalized
