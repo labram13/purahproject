@@ -95,9 +95,9 @@ class DetailsViewController: UIViewController {
             detailsLabel.text = weaponStats
             
         } else if let material = material {
-    
+            
         } else if let creature = creature {
-         
+            
         } else if let treasure = treasure {
             nameLabel.text = treasure.name.capitalized
             descriptionLabel.text = treasure.description
